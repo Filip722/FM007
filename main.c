@@ -4,17 +4,18 @@
 * Created: 10/7/2018 1:25:15 PM
 * Author : Filip Michalski
 */
+
 #include "main.h"
 #include <avr/io.h>
 #include <util/delay.h>
 
 #define MODE DW
 
-#define BOOT_BRIGHTNESS PWM_MAX/2
-#define BOOT_BALANCE BALANCE_MAX/2
+#define BOOT_BRIGHTNESS PWM_MAX/4
+#define BOOT_BALANCE BALANCE_MAX/4
 #define BOOT_STATE 0
 #define BOOT_DIRECTION_BRIGHTNESS 0 // 1 - UP, 0 - DOWN
-#define BOOT_DIRECTION_BALANCE 1
+#define BOOT_DIRECTION_BALANCE 1 // 1 - UP, 0 - DOWN
 
 uint8_t state = 0, direction_brightness = BOOT_DIRECTION_BRIGHTNESS, direction_balance = BOOT_DIRECTION_BALANCE;
 uint16_t brightness = BOOT_BRIGHTNESS, balance = BOOT_BALANCE;
