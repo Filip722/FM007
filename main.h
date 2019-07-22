@@ -1,17 +1,24 @@
 /*
- * main.h
- *
- * Created: 10/7/2018 1:49:33 PM
- *  Author: Filip Michalski
- */ 
+* main.h
+*
+* Created: 10/7/2018 1:49:33 PM
+*  Author: Filip Michalski
+*/
 
 
 #ifndef MAIN_H_
 #define MAIN_H_
 
-
 #define F_CPU 8000000
 #define PWM_MAX 16383 // 2^14 - 1
+
+#define MODE DW
+
+#define BOOT_BRIGHTNESS PWM_MAX/4
+#define BOOT_BALANCE BALANCE_MAX/4
+#define BOOT_STATE 0
+#define BOOT_DIRECTION_BRIGHTNESS 0 // 1 - UP, 0 - DOWN
+#define BOOT_DIRECTION_BALANCE 1 // 1 - UP, 0 - DOWN
 
 #define BALANCE_MAX 1024
 #define BALANCE_MIN 0
@@ -33,4 +40,4 @@
 #define DELAY_ONOFF 500
 
 
-#endif /* MAIN_H_ */
+#endif /* MAIN_H_ /*
